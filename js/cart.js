@@ -77,14 +77,15 @@ class ProductItemCart {
 }
 
 function renderAmount() {
-    if (true) {
-        amountCart.textContent = `${cartList.amount}`
-        amountCart.classList.remove('hidden') 
-    }
+    cartList._getProducts()
+        .then(data => {
+            amountCart.textContent = `${data.amount}`
+            amountCart.classList.remove('hidden')
+            console.log(data)
+        })
 }
 
 let cartList = new ProductsListCart;
 cartList.render();
 cartList.getSumm();
-setTimeout(renderAmount(), 2000);
-
+renderAmount()
