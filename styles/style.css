@@ -7,15 +7,40 @@ header {
     background-color: rgb(177, 250, 226);
     margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 20px;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .btn-cart {
+    position: relative;
     background-color: white;
     border: none;
     padding: 10px;
     border-radius: 10px;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    border-radius: 15px;
+    background-color: rgb(177, 250, 226);
+    padding: 15px;
+}
+
+.cart-item {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
 }
 
 .buy-btn {
@@ -43,6 +68,7 @@ header {
 p {
     background-color: rgb(177, 250, 226);
     background: linear-gradient(80deg, rgba(63,94,251,0) 15%, rgb(177, 250, 226) 30%, rgb(177, 250, 226) 70%, rgba(252,70,107,0) 85%);
-    width: 100%;
+    width: 100px;
     text-align: center;
+    align-self: center;
 }
